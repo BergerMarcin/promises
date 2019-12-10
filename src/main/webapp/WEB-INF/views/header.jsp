@@ -1,8 +1,9 @@
 <%@ taglib prefix="set" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
 <head>
-<%--    <title>Start Page (index)</title>--%>
+    <title>Promises</title>
 
     <%-- Elementy dotyczące treści strony --%>
     <%--    <meta name="description"--%>
