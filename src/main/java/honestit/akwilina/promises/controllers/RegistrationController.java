@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("/register")
+@RequestMapping("/registration")
 public class RegistrationController {
 
     private final RegistrationService registrationService;
@@ -25,14 +25,14 @@ public class RegistrationController {
     @GetMapping
     public String getRegistrationPage(Model model) {
         model.addAttribute("registrationData", new RegistrationDataDTO());
-        return "register/form";
+        return "registration/form";
     }
     @PostMapping
     public String postRegistrationPage(@ModelAttribute("registrationData")
                                           @Valid RegistrationDataDTO registrationData,
                                       BindingResult result) {
         if (result.hasErrors()) {
-            return "register/form";
+            return "registration/form";
         }
         // Zaimplementować zapis użytkownika
         registrationService.register(registrationData);
